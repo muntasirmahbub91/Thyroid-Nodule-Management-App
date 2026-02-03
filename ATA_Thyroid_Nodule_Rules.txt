@@ -1,0 +1,39 @@
+# Algorithm: “ATA 2015 Thyroid Nodule Evaluation Decision Logic”
+
+This document outlines the decision-making logic used in the Thyroid Nodule Evaluation module, based on the American Thyroid Association (ATA) 2015 guidelines.
+
+---
+
+### Step 1: Check for hot nodule (scintigraphy pre-check)
+
+If a patient's TSH is low (< 0.4 mIU/L) or a scintigraphy scan shows a "hot" (hyperfunctioning) nodule, the evaluation for malignancy typically stops.
+
+- **Action:** No FNA
+- **Rationale:** Hyperfunctioning (hot) nodules have a negligible malignancy risk.
+
+---
+
+### Step 2: Override Rule – Suspicious Lymph Node
+
+The presence of a suspicious lymph node is a strong indicator of malignancy and overrides other criteria.
+
+- **Action:** FNA of node (regardless of nodule size)
+- **Rationale:** A cervical lymph node suspicious for metastasis requires immediate investigation, starting with the node itself.
+
+---
+
+### Step 3: Ultrasound (US) Pattern Classification & FNA Decision
+
+If the above conditions are not met, the nodule is classified based on its ultrasound features to determine risk and the need for a biopsy. The action is determined by comparing the nodule's diameter to the category's threshold.
+
+| **Pattern**              | **Diagnostic Criteria**                                                                                                                              | **Risk %** | **FNA Threshold** |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------- |
+| **High Suspicion**       | Solid or partially cystic + hypoechoic/markedly hypoechoic **AND** ≥1 of: irregular/lobulated margins, taller-than-wide, microcalcifications, or ETE. | 70–90%     | **≥ 10 mm**       |
+| **Intermediate Suspicion** | Solid hypoechoic with smooth margins, **and no** high-risk features.                                                                                 | 10–20%     | **≥ 10 mm**       |
+| **Low Suspicion**        | Isoechoic/hyperechoic ± partially cystic, smooth margins, and no suspicious features.                                                                  | 5–10%      | **≥ 15 mm**       |
+| **Very Low Suspicion**   | Spongiform or partially cystic without any suspicious features.                                                                                        | <3%        | **≥ 20 mm**       |
+| **Benign Pattern**       | Purely cystic nodule.                                                                                                                                | ~0%        | **No FNA**        |
+
+- **Action if below threshold:** If a nodule's diameter is smaller than the FNA threshold for its category, the recommended action is **Observation** with follow-up ultrasound.
+- **Action for Very Low Suspicion ≥ 20mm:** The action is **Optional FNA or Observation**, decided based on clinical judgment and patient preference.
+- **Unclassified:** If a nodule's features do not fit any category, the recommended action is **Clinical correlation and follow-up**, typically with a repeat ultrasound in 12-24 months.

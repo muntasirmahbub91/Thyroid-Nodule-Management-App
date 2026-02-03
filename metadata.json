@@ -1,0 +1,5 @@
+{
+  "name": "Dr Muntasir’s Thyroid Nodule & Cancer Management App",
+  "description": "A comprehensive tool for managing thyroid nodules and cancer, from initial evaluation (US, FNA, Cytology) to staging, treatment, and adjuvant therapy planning, based on AJCC-8 and NCCN 2025 guidelines.",
+  "requestFramePermissions": []
+}
