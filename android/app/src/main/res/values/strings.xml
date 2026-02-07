@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Thyroid Nodule Management</string>
+    <string name="title_activity_main">Thyroid Nodule Management</string>
+    <string name="package_name">com.thyroidmgmt.app</string>
+    <string name="custom_url_scheme">com.thyroidmgmt.app</string>
+</resources>
