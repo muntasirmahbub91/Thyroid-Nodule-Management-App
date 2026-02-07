@@ -92,15 +92,8 @@ export const NoduleStepper: React.FC<NoduleStepperProps> = ({ onBack, onProceedT
         steps.push(ALL_STEPS[3]); // node_biomarker
 
         // Step 4: Cytology (FNA) Results
-        // Only include if FNA is indicated by the algorithm based on USG/Node findings,
-        // or if the user has already started entering cytology data.
-        const currentResult = evaluateThyroidNoduleFlow(input);
-        const fnaIndicated = currentResult.action.includes('FNA');
-        const fnaAlreadyEntered = input.bethesda_cat !== '' || input.rcpath_thy !== '' || input.cytology_system !== 'Bethesda'; // If system changed, they probably care about it
-
-        if (fnaIndicated || fnaAlreadyEntered) {
-            steps.push(ALL_STEPS[4]); // cytology
-        }
+        // Always show this step - clinicians may perform FNA even if not strictly indicated
+        steps.push(ALL_STEPS[4]); // cytology
 
         // Post-op only if specifically reached (e.g. after diagnostic surgery recommendation)
         if (input.post_op_histology.final_histology) {
@@ -110,14 +103,6 @@ export const NoduleStepper: React.FC<NoduleStepperProps> = ({ onBack, onProceedT
         return steps;
     }, [
         input.TSH,
-        input.scan_pattern,
-        input.scan_concordant,
-        input.features,
-        input.node_suspicious,
-        input.calcitonin_elevated,
-        input.bethesda_cat,
-        input.rcpath_thy,
-        input.cytology_system,
         input.post_op_histology.final_histology
     ]);
 
