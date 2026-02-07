@@ -1,5 +1,5 @@
 
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { NoduleCaseInput, ActionOut, NoduleHandoffContext, ThyroidHistology, PostOpHistology } from '../../types';
 import { evaluateThyroidNoduleFlow } from '../../services/noduleFlowAlgorithm';
 import { TSHOnlyPanel } from './TSHOnlyPanel';
@@ -120,6 +120,13 @@ export const NoduleStepper: React.FC<NoduleStepperProps> = ({ onBack, onProceedT
         input.cytology_system,
         input.post_op_histology.final_histology
     ]);
+
+    // CRITICAL: Clamp stepIndex if activeSteps shrinks
+    useEffect(() => {
+        if (stepIndex >= activeSteps.length && activeSteps.length > 0) {
+            setStepIndex(activeSteps.length - 1);
+        }
+    }, [activeSteps.length, stepIndex]);
 
     const updateInput = useCallback((update: Partial<NoduleCaseInput>) => {
         let newUpdate = { ...update };
